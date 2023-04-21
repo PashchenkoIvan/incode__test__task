@@ -1,0 +1,16 @@
+.container {
+    @apply mt-[50px];
+}
+
+.block {
+    @apply w-[250px] h-[100px] bg-white rounded-xl mt-[20px] p-[5px] relative;
+}
+.block h1 {
+    @apply text-gray-500;
+}
+.authorBlock {
+    @apply w-full absolute bottom-0 flex flex-row justify-evenly items-center;
+}
+.authorBlock h1 {
+    @apply text-[12px];
+}
