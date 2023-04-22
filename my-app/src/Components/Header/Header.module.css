@@ -1,30 +1,33 @@
 .container {
-    @apply w-full h-[300px] lg:h-[100px] flex justify-between items-center px-[20px] bg-white rounded-b-lg;
+    @apply w-full h-[300px] lg:h-[100px] flex flex-col items-center px-[20px] bg-white rounded-b-lg;
 }
-.container input {
-    @apply w-4/5 max-w-[1500px] h-1/3 pl-[10px]
+.topBlock {
+    @apply w-full h-1/2 flex items-center justify-between;
+}
+.topBlock input {
+    @apply w-4/5 max-w-[1500px] h-3/4 pl-[10px]
     border border-black
     outline-none;
     transition: .05s;
 }
-.container input:hover {
+.topBlock input:hover {
     border-width: 3px;
     border-image: linear-gradient(45deg, purple, orange) 1;
     transition: .05s;
 }
-.container input:focus {
+.topBlock input:focus {
     border-width: 3px;
     border-image: linear-gradient(45deg, purple, orange) 1;
     transition: .05s;
 }
 .bigBtn {
-    @apply hidden w-1/5 max-w-[250px] h-1/3 lg:flex justify-center items-center;
+    @apply hidden w-1/5 max-w-[250px] h-3/4 lg:flex justify-center items-center;
 }
 .bigBtn svg {
     @apply h-2/3 stroke-black mr-[10px];
 }
 .smallBtn {
-    @apply lg:hidden w-1/5 max-w-[250px] h-1/3 flex justify-center items-center;
+    @apply lg:hidden w-1/5 max-w-[250px] h-3/4 flex justify-center items-center;
 }
 .smallBtn svg {
     @apply h-2/3 stroke-black mr-[10px];
@@ -38,4 +41,23 @@
 
 .bigBtn:active, .smallBtn:active {
     transform: scale(.9);
+}
+
+.bottomBlock {
+    @apply w-full h-1/2 flex flex-col lg:flex-row items-center;
+}
+.left {
+    @apply h-1/2 lg:h-full flex items-center justify-between;
+}
+.left a, .left p {
+    @apply mr-[5px] text-blue-500 font-semibold text-xl transition-all;
+}
+.left a:hover {
+    @apply underline;
+}
+.right {
+    @apply h-1/2 lg:h-full flex items-center ml-[30px];
+}
+.right svg {
+    @apply h-1/2 stroke-yellow-400 fill-yellow-400;
 }
